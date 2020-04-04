@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{81cd6b2f-ef58-4f4b-9aa9-881c62dbc621}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>calibrate.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="dump.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="calibrate.py" />
+    <Compile Include="configuration.py" />
+    <Compile Include="libraries\Adafruit_I2C.py" />
+    <Compile Include="libraries\Adafruit_MotorHAT.py" />
+    <Compile Include="libraries\Adafruit_PWM_Servo_Driver.py" />
+    <Compile Include="Robot_Main.py" />
+    <Compile Include="sensors.py" />
+    <Compile Include="test\compass.py" />
+    <Compile Include="wheels.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="libraries" />
+    <Folder Include="test" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
