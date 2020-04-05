@@ -23,4 +23,11 @@ pin = pins.distance_trigger_right
 GPIO.output(pin,True)
 ans = raw_input('Testing right, click enter to continue')
 GPIO.output(pin,False)
+
+pin = pins.distance_read
+GPIO.setup(pin,GPIO.OUT)
+GPIO.output(pin,True)
+ans = raw_input('Testing read pin, click enter to continue')
+GPIO.output(pin,False)
+
 GPIO.cleanup()
