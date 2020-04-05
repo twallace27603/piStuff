@@ -5,7 +5,7 @@ from multiprocessing import Pool, Process, Queue
 import Queue as Q
 import pins
 
-trigs = (pins.distance_trigger,pins.distance_trigger_left,pins.distance_trigger_right,)
+triggers = (pins.distance_trigger,pins.distance_trigger_left,pins.distance_trigger_right,)
 
 GPIO.setmode(GPIO.BCM)
 for trigger in triggers:
