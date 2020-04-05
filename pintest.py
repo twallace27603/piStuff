@@ -5,6 +5,7 @@ from multiprocessing import Pool, Process, Queue
 import Queue as Q
 import pins
 
+GPIO.setmode(GPIO.BCM)
 pin = pins.distance_trigger
 GPIO.setup(pin,GPIO.OUT)
 GPIO.output(pin,True)
