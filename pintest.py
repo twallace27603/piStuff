@@ -6,9 +6,19 @@ import Queue as Q
 import pins
 
 GPIO.setmode(GPIO.BCM)
+for trigger in triggers:
+    GPIO.setup(trigger,GPIO.OUT)
+    GPIO.output(trigger,False)
 pin = pins.distance_trigger
-GPIO.setup(pin,GPIO.OUT)
 GPIO.output(pin,True)
-time.sleep(60.0)
+ans = input('Testing middle, click enter to continue')
+GPIO.output(pin,False)
+pin = pins.distance_trigger_left
+GPIO.output(pin,True)
+ans = input('Testing left, click enter to continue')
+GPIO.output(pin,False)
+pin = pins.distance_trigger_left
+GPIO.output(pin,True)
+ans = input('Testing left, click enter to continue')
 GPIO.output(pin,False)
 GPIO.cleanup()
