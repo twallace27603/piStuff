@@ -19,8 +19,8 @@ pin = pins.distance_trigger_left
 GPIO.output(pin,True)
 ans = raw_input('Testing left, click enter to continue')
 GPIO.output(pin,False)
-pin = pins.distance_trigger_left
+pin = pins.distance_trigger_right
 GPIO.output(pin,True)
-ans = raw_input('Testing left, click enter to continue')
+ans = raw_input('Testing right, click enter to continue')
 GPIO.output(pin,False)
 GPIO.cleanup()
