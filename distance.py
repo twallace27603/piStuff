@@ -52,11 +52,9 @@ class Distance:
                    else:
                        if high == False:
                            highTime = rt
-                           print('got high')
                        else:
                            low = True
                            lowTime = rt
-                           print('got low')
                    cont = (low == False) and ((time.time() - startTime) < timeout)
                        
                 times.append(lowTime - highTime)
