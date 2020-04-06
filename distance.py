@@ -59,7 +59,7 @@ class Distance:
                 if low:
                     print("Trigger {} trial {} had a time of {}".format(trigger, trial,(lowTime-highTime)))
                 else:
-                    print("Trigger {} trial {} did not capture a time".format(trigger,trial))
+                    print("Trigger {} trial {} did not capture a time. High was {}".format(trigger,trial, high))
                        
                 times.append(lowTime - highTime)
             times.sort()
