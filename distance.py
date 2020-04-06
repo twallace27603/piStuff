@@ -56,6 +56,10 @@ class Distance:
                            low = True
                            lowTime = rt
                    cont = (low == False) and ((time.time() - startTime) < timeout)
+                if low:
+                    print("Trigger {} trial {} had a time of {}".format(trigger, trial,(lowTime-highTime)))
+                else:
+                    print("Trigger {} trial {} did not capture a time".format(trigger,trial))
                        
                 times.append(lowTime - highTime)
             times.sort()
