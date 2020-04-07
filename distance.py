@@ -49,7 +49,6 @@ class Distance:
                    rt = time.time()
                    if reading == 1:
                        high = True
-                       print("{}-{} high".format(trigger,trial))
                    else:
                        if high == False:
                            highTime = rt
