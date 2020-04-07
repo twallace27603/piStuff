@@ -24,10 +24,4 @@ GPIO.output(pin,True)
 ans = raw_input('Testing right - {}, click enter to continue'.format(pin))
 GPIO.output(pin,False)
 
-pin = pins.distance_read
-GPIO.setup(pin,GPIO.OUT)
-GPIO.output(pin,True)
-ans = raw_input('Testing read pi - {}n, click enter to continue'.format(pin))
-GPIO.output(pin,False)
-
 GPIO.cleanup()
