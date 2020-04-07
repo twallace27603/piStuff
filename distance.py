@@ -70,7 +70,7 @@ if __name__ == '__main__':
     print("hey")
     timeout = 1
     retries = 5
-    trigs = (pins.distance_trigger,pins.distance_trigger_left,pins.distance_trigger_right,)
+    trigs = (pins.distance_trigger,)
     echo = pins.distance_read
     GPIO.setmode(GPIO.BCM)
     d = Distance(trigs, echo)
