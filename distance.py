@@ -29,11 +29,11 @@ class Distance:
         cont = True
         startTime = time.time()
         distances = []
-        print(trials)
+        print("Trials:\t{}".format(trials))
+        print("Sensor pin:\t{}".format(sensor))
 
         for trigger in triggers:
             times = []
-            print(trigger)
             for trial in range(1,trials):
                 high = False
                 low = False
@@ -42,7 +42,7 @@ class Distance:
                 startTime = time.time()
                 cont = True
                 GPIO.output(trigger,True)
-                time.sleep(0.0001)
+                time.sleep(0.00001)
                 GPIO.output(trigger,False)
                 while cont: 
                    reading = GPIO.input(sensor)
