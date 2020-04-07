@@ -13,21 +13,21 @@ for trigger in triggers:
     GPIO.output(trigger,False)
 pin = pins.distance_trigger
 GPIO.output(pin,True)
-ans = raw_input('Testing middle, click enter to continue')
+ans = raw_input('Testing middle - {}, click enter to continue'.format(pin))
 GPIO.output(pin,False)
 pin = pins.distance_trigger_left
 GPIO.output(pin,True)
-ans = raw_input('Testing left, click enter to continue')
+ans = raw_input('Testing left - {}, click enter to continue'.format(pin))
 GPIO.output(pin,False)
 pin = pins.distance_trigger_right
 GPIO.output(pin,True)
-ans = raw_input('Testing right, click enter to continue')
+ans = raw_input('Testing right - {}, click enter to continue'.format(pin))
 GPIO.output(pin,False)
 
 pin = pins.distance_read
 GPIO.setup(pin,GPIO.OUT)
 GPIO.output(pin,True)
-ans = raw_input('Testing read pin, click enter to continue')
+ans = raw_input('Testing read pi - {}n, click enter to continue'.format(pin))
 GPIO.output(pin,False)
 
 GPIO.cleanup()
